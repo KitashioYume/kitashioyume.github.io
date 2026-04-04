@@ -20,10 +20,10 @@
   --btn-default-hover-bg: #fff;
   --btn-default-hover-color: #222;
   --btn-default-hover-border-color: #222;
-  --highlight-background: #f3f3f3;
-  --highlight-foreground: #444;
-  --highlight-gutter-background: #e1e1e1;
-  --highlight-gutter-foreground: #555;
+  --highlight-background: #fff;
+  --highlight-foreground: #000;
+  --highlight-gutter-background: #e5e5e5;
+  --highlight-gutter-foreground: #191919;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
@@ -49,10 +49,10 @@
     --btn-default-hover-bg: #666;
     --btn-default-hover-color: #ccc;
     --btn-default-hover-border-color: #666;
-    --highlight-background: #1c1b1b;
-    --highlight-foreground: #fff;
-    --highlight-gutter-background: #323131;
-    --highlight-gutter-foreground: #e8e8e8;
+    --highlight-background: #474949;
+    --highlight-foreground: #d1d9e1;
+    --highlight-gutter-background: #545758;
+    --highlight-gutter-foreground: #c3cad1;
     color-scheme: dark;
   }
   img {
@@ -413,113 +413,100 @@ code.hljs {
   padding: 3px 5px
 }
 /*!
-  Theme: Default
-  Description: Original highlight.js style
-  Author: (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
-  Maintainer: @highlightjs/core-team
-  Website: https://highlightjs.org/
-  License: see project LICENSE
-  Touched: 2021
-*/
-/*
-This is left on purpose making default.css the single file that can be lifted
-as-is from the repository directly without the need for a build step
+  Theme: nnfx light
+  Description: a theme inspired by Netscape Navigator/Firefox
+  Author: (c) 2020-2021 Jim Mason <jmason@ibinx.com>
+  Maintainer: @RocketMan
+  License: https://creativecommons.org/licenses/by-sa/4.0  CC BY-SA 4.0
+  Updated: 2021-05-17
 
-Typically this "required" baseline CSS is added by `makestuff.js` during build.
+  @version 1.1.0
 */
-pre code.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 1em
-}
-code.hljs {
-  padding: 3px 5px
-}
-/* end baseline CSS */
 .hljs {
-  background: #F3F3F3;
-  color: #444
+  background: #fff;
+  color: #000
 }
-/* Base color: saturation 0; */
-.hljs-subst {
-  /* default */
-  
+.language-xml .hljs-meta,
+.language-xml .hljs-meta-string {
+  font-weight: bold;
+  font-style: italic;
+  color: #48b
 }
-/* purposely ignored */
-.hljs-formula,
-.hljs-attr,
-.hljs-property,
-.hljs-params {
-  
+.hljs-comment,
+.hljs-quote {
+  font-style: italic;
+  color: #070
 }
-.hljs-comment {
-  color: #697070
-}
-.hljs-tag,
-.hljs-punctuation {
-  color: #444a
-}
-.hljs-tag .hljs-name,
-.hljs-tag .hljs-attr {
-  color: #444
-}
+.hljs-name,
 .hljs-keyword,
-.hljs-attribute,
-.hljs-selector-tag,
-.hljs-meta .hljs-keyword,
-.hljs-doctag,
-.hljs-name {
+.hljs-built_in {
+  color: #808
+}
+.hljs-name,
+.hljs-attr {
   font-weight: bold
 }
-/* User color: hue: 0 */
-.hljs-type,
+.hljs-string {
+  font-weight: normal
+}
+.hljs-code,
 .hljs-string,
+.hljs-meta .hljs-string,
 .hljs-number,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-quote,
-.hljs-template-tag,
-.hljs-deletion {
-  color: #880000
+.hljs-regexp,
+.hljs-link {
+  color: #00f
 }
 .hljs-title,
-.hljs-section {
-  color: #880000;
-  font-weight: bold
-}
-.hljs-regexp,
 .hljs-symbol,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-link,
-.hljs-selector-attr,
-.hljs-operator,
-.hljs-selector-pseudo {
-  color: #ab5656
-}
-/* Language color: hue: 90; */
-.hljs-literal {
-  color: #695
-}
-.hljs-built_in,
 .hljs-bullet,
-.hljs-code,
-.hljs-addition {
-  color: #397300
+.hljs-variable,
+.hljs-template-variable {
+  color: #f40
 }
-/* Meta color: hue: 200 */
-.hljs-meta {
-  color: #1f7199
+.hljs-title.class_,
+.hljs-class .hljs-title,
+.hljs-type {
+  font-weight: bold;
+  color: #639
 }
-.hljs-meta .hljs-string {
-  color: #38a
+.hljs-title.function_,
+.hljs-function .hljs-title,
+.hljs-attr,
+.hljs-subst,
+.hljs-tag {
+  color: #000
 }
-/* Misc effects */
-.hljs-emphasis {
+.hljs-formula {
+  background-color: #eee;
   font-style: italic
 }
+.hljs-addition {
+  background-color: #beb
+}
+.hljs-deletion {
+  background-color: #fbb
+}
+.hljs-meta {
+  color: #269
+}
+.hljs-section,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-pseudo,
+.hljs-selector-tag {
+  font-weight: bold;
+  color: #48b
+}
+.hljs-selector-pseudo {
+  font-style: italic
+}
+.hljs-doctag,
 .hljs-strong {
   font-weight: bold
+}
+.hljs-emphasis {
+  font-style: italic
 }
 @media (prefers-color-scheme: dark) {
 pre code.hljs {
@@ -530,115 +517,106 @@ pre code.hljs {
 code.hljs {
   padding: 3px 5px
 }
-/*!
-  Theme: StackOverflow Dark
-  Description: Dark theme as used on stackoverflow.com
-  Author: stackoverflow.com
-  Maintainer: @Hirse
-  Website: https://github.com/StackExchange/Stacks
-  License: MIT
-  Updated: 2021-05-15
+/*
 
-  Updated for @stackoverflow/stacks v0.64.0
-  Code Blocks: /blob/v0.64.0/lib/css/components/_stacks-code-blocks.less
-  Colors: /blob/v0.64.0/lib/css/exports/_stacks-constants-colors.less
+Style with support for rainbow parens
+
 */
 .hljs {
-  /* var(--highlight-color) */
-  color: #ffffff;
-  /* var(--highlight-bg) */
-  background: #1c1b1b
+  background: #474949;
+  color: #d1d9e1
 }
-.hljs-subst {
-  /* var(--highlight-color) */
-  color: #ffffff
-}
-.hljs-comment {
-  /* var(--highlight-comment) */
-  color: #999999
+.hljs-comment,
+.hljs-quote {
+  color: #969896;
+  font-style: italic
 }
 .hljs-keyword,
 .hljs-selector-tag,
-.hljs-meta .hljs-keyword,
-.hljs-doctag,
-.hljs-section {
-  /* var(--highlight-keyword) */
-  color: #88aece
-}
-.hljs-attr {
-  /* var(--highlight-attribute); */
-  color: #88aece
-}
-.hljs-attribute {
-  /* var(--highlight-symbol) */
-  color: #c59bc1
-}
-.hljs-name,
+.hljs-literal,
 .hljs-type,
-.hljs-number,
-.hljs-selector-id,
-.hljs-quote,
-.hljs-template-tag {
-  /* var(--highlight-namespace) */
-  color: #f08d49
+.hljs-addition {
+  color: #cc99cc
 }
-.hljs-selector-class {
-  /* var(--highlight-keyword) */
-  color: #88aece
+.hljs-number,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #f99157
 }
 .hljs-string,
-.hljs-regexp,
-.hljs-symbol,
+.hljs-doctag,
+.hljs-regexp {
+  color: #8abeb7
+}
+.hljs-title,
+.hljs-name,
+.hljs-section,
+.hljs-built_in {
+  color: #b5bd68
+}
 .hljs-variable,
 .hljs-template-variable,
-.hljs-link,
-.hljs-selector-attr {
-  /* var(--highlight-variable) */
-  color: #b5bd68
+.hljs-selector-id,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #ffcc66
 }
-.hljs-meta,
-.hljs-selector-pseudo {
-  /* var(--highlight-keyword) */
-  color: #88aece
+.hljs-section,
+.hljs-name,
+.hljs-strong {
+  font-weight: bold
 }
-.hljs-built_in,
-.hljs-title,
-.hljs-literal {
-  /* var(--highlight-literal) */
-  color: #f08d49
-}
+.hljs-symbol,
 .hljs-bullet,
-.hljs-code {
-  /* var(--highlight-punctuation) */
-  color: #cccccc
-}
-.hljs-meta .hljs-string {
-  /* var(--highlight-variable) */
-  color: #b5bd68
+.hljs-subst,
+.hljs-meta,
+.hljs-link {
+  color: #f99157
 }
 .hljs-deletion {
-  /* var(--highlight-deletion) */
-  color: #de7176
+  color: #dc322f
 }
-.hljs-addition {
-  /* var(--highlight-addition) */
-  color: #76c490
+.hljs-formula {
+  background: #eee8d5
+}
+.hljs-attr,
+.hljs-attribute {
+  color: #81a2be
 }
 .hljs-emphasis {
   font-style: italic
 }
-.hljs-strong {
-  font-weight: bold
 }
-.hljs-formula,
-.hljs-operator,
-.hljs-params,
-.hljs-property,
-.hljs-punctuation,
-.hljs-tag {
-  /* purposely ignored */
-  
+.highlight:hover .copy-btn,
+.code-container:hover .copy-btn {
+  opacity: 1;
 }
+.code-container {
+  position: relative;
+}
+.code-lang {
+  font-size: 40px;
+  line-height: 1;
+  opacity: 0.1;
+  pointer-events: none;
+  position: absolute;
+  right: 5px;
+}
+.copy-btn {
+  color: #333;
+  cursor: pointer;
+  line-height: 1.6;
+  opacity: 0;
+  padding: 2px 6px;
+  position: absolute;
+  transition: opacity 0.2s ease-in-out;
+  background-color: #eee;
+  background-image: linear-gradient(#fcfcfc, #eee);
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  font-size: 0.8125em;
+  right: 4px;
+  top: 8px;
 }
 code,
 kbd,
@@ -1346,8 +1324,38 @@ pre code {
 .use-motion .menu-item {
   visibility: hidden;
 }
+.github-corner :hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+.github-corner svg {
+  color: #fff;
+  fill: var(--theme-color);
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 5;
+}
+@media (max-width: 991px) {
+  .github-corner .github-corner:hover .octo-arm {
+    animation: none;
+  }
+  .github-corner .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
+@keyframes octocat-wave {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  20%, 60% {
+    transform: rotate(-25deg);
+  }
+  40%, 80% {
+    transform: rotate(10deg);
+  }
+}
 .sidebar {
-  left: -320px;
+  left: -280px;
 }
 .sidebar-active .sidebar {
   left: 0;
@@ -1355,14 +1363,13 @@ pre code {
 .sidebar {
   background: #222;
   bottom: 0;
-  box-shadow: inset 0 2px 6px #000;
   max-height: 100vh;
   overflow-y: auto;
   position: fixed;
   top: 0;
   transition: 0.2s ease-out;
   transition-property: left, right;
-  width: 320px;
+  width: 280px;
   z-index: 20;
 }
 .sidebar a {
@@ -1384,7 +1391,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #2bff73;
+  background: #9cdfff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -1603,21 +1610,6 @@ pre code {
   line-height: 1.8;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.post-toc .nav .nav-child {
-  --height: 0;
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition-property: height, opacity, visibility;
-  transition: 0.2s ease-in-out;
-  visibility: hidden;
-}
-.post-toc .nav .active > .nav-child {
-  height: var(--height, auto);
-  opacity: 1;
-  visibility: unset;
 }
 .post-toc .nav .active > a {
   border-bottom-color: #87daff;
@@ -1633,6 +1625,10 @@ pre code {
   border: 2px solid #333;
   max-width: 96px;
   padding: 2px;
+  transition: transform 1s ease-out;
+}
+.site-author-image:hover {
+  transform: rotateZ(360deg);
 }
 .site-author-name {
   color: #f5f5f5;
@@ -1716,7 +1712,6 @@ pre code {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  flex-direction: column;
 }
 .links-of-blogroll-item {
   max-width: 100%;
@@ -1789,6 +1784,7 @@ pre code {
   color: #f00;
   display: inline-block;
   margin: 0 5px;
+  animation: icon-animate 1.33s ease-in-out infinite;
 }
 @keyframes icon-animate {
   0%, 100% {
@@ -1806,46 +1802,23 @@ pre code {
 }
 .back-to-top {
   font-size: 12px;
-  align-items: center;
-  bottom: -100px;
-  color: #fff;
-  display: flex;
-  height: 26px;
-  transition: 0.2s ease-in-out;
-  transition-property: bottom;
-  background: #222;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  z-index: 30;
-  left: 30px;
+  margin: 10px -10px -20px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
 .back-to-top span {
   margin-right: 8px;
-  display: none;
 }
 .back-to-top .fa {
   text-align: center;
   width: 26px;
 }
-@media (max-width: 991px) {
-  .back-to-top {
-    left: 20px;
-  }
-}
-.back-to-top:hover {
-  opacity: 1;
-}
-@media (max-width: 991px) {
-  .back-to-top {
-    opacity: 1;
-  }
-}
-.back-to-top:hover {
-  color: #87daff;
-}
 .back-to-top.back-to-top-on {
-  bottom: 30px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.back-to-top.back-to-top-on:hover {
+  opacity: 1;
 }
 .rtl.post-body p,
 .rtl.post-body a,
@@ -2333,6 +2306,56 @@ pre code {
     transform: rotateZ(-30deg);
   }
 }
+.followme {
+  color: #bbb;
+  padding: 1em 1.5em;
+  text-align: center;
+  background: var(--card-bg-color);
+  border-left: 3px solid #ff2a2a;
+  margin: 1em 0 0;
+}
+.followme .social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.followme .social-list .social-item {
+  margin: 0.5em 2em;
+  position: relative;
+}
+@media (max-width: 991px) {
+  .followme .social-list .social-item {
+    margin: 0.5em 0.75em;
+  }
+}
+.followme .social-list .social-link {
+  border: 0;
+  display: block;
+}
+.followme .social-list .social-link .icon {
+  font-size: 1.75em;
+}
+.followme .social-list .social-link .label {
+  display: block;
+  font-size: 14px;
+}
+.followme .social-list .social-link:hover + .social-item-img {
+  display: block;
+}
+.followme .social-list span.social-link {
+  color: var(--link-color);
+}
+.followme .social-list span.social-link:hover {
+  color: var(--link-hover-color);
+}
+.followme .social-list .social-item-img {
+  display: none;
+  left: 50%;
+  max-width: 180px;
+  position: absolute;
+  transform: translate(-50%, 20px);
+  z-index: 1;
+}
 .category-all-page .category-all-title {
   text-align: center;
 }
@@ -2712,9 +2735,9 @@ header.header {
     display: none;
   }
   .sidebar-active {
-    padding-left: 320px;
+    padding-left: 280px;
   }
   .sidebar-active .footer-fixed {
-    left: 320px;
+    left: 280px;
   }
 }
