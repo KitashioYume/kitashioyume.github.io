@@ -9,14 +9,14 @@
   <link href="https://kitashioyume.github.io/atom.xml" rel="self"/>
   <rights>All rights reserved 2026, Kitashio Yume</rights>
   <title>Yume Dreamland</title>
-  <updated>2026-04-06T11:02:50.468Z</updated>
+  <updated>2026-04-06T11:04:48.306Z</updated>
   <entry>
     <author>
       <name>Kitashio Yume</name>
     </author>
     <category term="us" scheme="https://kitashioyume.github.io/tags/us/"/>
     <content>
-      <![CDATA[<p>Hello everyone, we are Dreamland System, a <a href="https://wiki.pluralitycn.com/DID">did</a> system, and my name is Kana. main of our system. We’re glad to make friends of you reading this post &gt;_&lt;</p><p><img data-src="/image/intro.png"></p>]]>
+      <![CDATA[<p>Hello everyone, we are Dreamland System, a <a href="https://wiki.pluralitycn.com/DID">did</a> system, and my name is Kana. main of our system. We’re glad to make friends of you reading this post &gt;_&lt;</p><p><img data-src="/images/intro.png"></p>]]>
     </content>
     <id>https://kitashioyume.github.io/2026/04/06/self-intro/</id>
     <link href="https://kitashioyume.github.io/2026/04/06/self-intro/"/>
@@ -25,6 +25,6 @@
       <![CDATA[This is a introduction for us >_<]]>
     </summary>
     <title>self-intro</title>
-    <updated>2026-04-06T11:02:50.468Z</updated>
+    <updated>2026-04-06T11:04:48.306Z</updated>
   </entry>
 </feed>
